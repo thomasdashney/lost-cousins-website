@@ -1,0 +1,36 @@
+body {
+	margin-top: 10px;
+}
+
+h1 {
+	margin: 0.6em 0;
+}
+
+#social {
+	margin: 1em 0 1.4em;
+}
+
+#social img {
+	margin: 0 0.4em;
+
+
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+#social img:hover {
+	opacity: 0.5;
+}
+
+#show-dates {
+	background-color: black;
+	background-color: rgba(0, 0, 0, 0.8);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+	color: white !important;
+}
