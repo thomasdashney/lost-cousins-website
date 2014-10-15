@@ -1,0 +1,231 @@
+@import (less) "./lib/normalize.css";
+@import (less) "./lib/html5-boilerplate.css";
+
+// bootstrap
+// Core variables and mixins
+@import "./bootstrap/variables.less";
+@import "./bootstrap/mixins.less";
+@import "./bootstrap/normalize.less";
+@import "./bootstrap/utilities.less";
+@import "./bootstrap/type.less";
+@import "./bootstrap/grid.less";
+@import "./bootstrap/responsive-utilities.less";
+@import "./bootstrap/scaffolding.less";
+
+// extra stuff i ended up needing
+// icons
+@import "./bootstrap/glyphicons.less";
+// modal styling
+@import "./bootstrap/tooltip.less";
+@import "./bootstrap/modals.less";
+@import "./bootstrap/close.less";
+@import "./bootstrap/buttons.less";
+@import "./bootstrap/forms.less";
+@import "./bootstrap/input-groups.less";
+@import "./bootstrap/wells.less";
+
+@font-face {
+  font-family: 'rabioheadregular';
+  src: url('../fonts/rabiohead-webfont.eot');
+  src: url('../fonts/rabiohead-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/rabiohead-webfont.woff') format('woff'),
+       url('../fonts/rabiohead-webfont.ttf') format('truetype'),
+       url('../fonts/rabiohead-webfont.svg#rabioheadregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// background stuff
+body {
+	background: url(../img/man-tree-bg.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	font-family: 'rabioheadregular', 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+// fixing the container widths
+// make lg use md width
+.container {
+	background: url(../img/white-transparent-bg-new.png) repeat-y center center fixed;
+	background-size: 993px 1px;
+	z-index: 0;
+	position: relative;
+	@media (max-width: @screen-sm-min) {
+		width: 100%;
+	}
+	@media (min-width: @screen-sm-min) {
+		width: @container-sm;
+	}
+	@media (min-width: @screen-md-min) {
+		width: @container-md;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-md;
+	}
+}
+
+// music player
+#players {
+	background-image: url(../img/player/player-bg.png);
+	width: 457px;
+	height: 375px;
+	position: relative;
+
+	button.play-pause-button {
+		margin-top: 44px;
+		margin-left: 5px;
+	    background: none;
+	    border: none;
+	    outline: none;
+	}
+
+	.play-pause-button .play-pause-icon {
+    	width: 30px;
+    	height: 30px;
+	}
+
+	progress {
+		margin-top: 90px;
+		width: 160px;
+		height: 14px;
+		-webkit-appearance: none;
+		border: none;
+
+		&.song-seeker::-webkit-progress-bar {
+			background: rgba(0, 0, 0, 0.6);
+			border-radius: 50px;
+			padding: 2px;
+			box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+		}
+
+		&.song-seeker-not-playing::-webkit-progress-bar {
+			background: rgba(0, 0, 0, 0.3); // lighter
+			border-radius: 50px;
+			padding: 2px;
+			box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	// soundcloud-logo
+	img#soundcloud-logo {
+		position: absolute;
+		top: 168px;
+		left: 384px;
+	}
+
+	// download + support
+	a#download-button {
+		color: black;
+		position: absolute;
+		top: 150px;
+		left: 360px;
+		.glyphicon {
+			font-size: 1.8em;
+			opacity: 1;
+			transition: opacity 0.1s linear;
+		}
+		&.blinking .glyphicon {
+			opacity: 0.6;
+		}
+	}
+	
+
+	#drift {
+		position: absolute;
+		top: 14px;
+		left: 200px;
+		
+		progress::-webkit-progress-value {
+			border-radius: 50px;
+			box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+			background:
+				-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+			  -webkit-linear-gradient(left, #5cbeff, #8acefc);
+		}
+	}
+
+	#elegy {
+		position: absolute;
+		top: 194px;
+		left: 200px;
+		
+		progress::-webkit-progress-value {
+			border-radius: 50px;
+			box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+			background:
+				-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+			  -webkit-linear-gradient(left, #ff9c6d, #fdcbb2);
+		}
+	}
+
+	// buttons
+	button {
+		border: none;
+		position: absolute;
+		background-color: transparent;
+	}
+	button#drift-button {
+		background: url(../img/player/drift-text.png);
+		margin-top: 34px;
+		margin-left: 40px;
+		width: 120px;
+		height: 48px;
+	}
+	button#elegy-button {
+		background: url(../img/player/elegy-text.png);
+		margin-top: 30px;
+		margin-left: 40px;
+		width: 110px;
+		height: 59px;
+	}
+}
+
+// tour dates table
+
+table {
+	width: 100%;
+	border-collapse: separate; 
+	border-spacing: 0 10px;
+	tr {
+		background-color: rgb(248,248,248); // fallback
+		background-color: rgba(248,248,248,0.8); // 
+	}
+	th {
+		text-align: center;
+		padding: 10px 0px;
+	}
+	td {
+		padding: 5px 10px;
+		z-index: 2;
+		&:first-child,
+		&:last-child {
+			white-space: nowrap;
+		}
+	}
+}
+
+// media section
+#media {
+	position: relative;
+}
+
+.no-upcoming-shows {
+	background-color: rgba(248,248,248,1);
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+// download modal
+#download-modal {
+	ul {
+	    list-style-type: none;
+	}
+	li {
+		margin-bottom: 8px;
+	}
+}
