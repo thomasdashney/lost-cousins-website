@@ -186,52 +186,6 @@
         </div>
         <!-- /.container -->
 
-        <!-- donate modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Download Drift &amp; Elegy</h4>
-              </div>
-              <div class="modal-body container-fluid">
-                <form class="form" role="form">
-                    <div class="row">
-                      <div class="col-md-8 col-md-push-4">
-                        <ul class="well">
-                          <li>Written and Recorded by Lost Cousins</li>
-                          <li>Engineered, Mixed and Produced by Darryl Neudorf</li>
-                          <li>Released in 2014</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 col-md-pull-8">
-                        Name your price:<hr>
-                            <div class="radio" name="amount">
-                              <label>
-                                <input type="radio" name="amount" id="free-radio-box" value="free" checked>
-                                Free
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="amount" id="optionsRadios3" value="custom">
-                                $<input size="1" style="display: inline;" type="text" placeholder="2"> CAD
-                              </label>
-                            </div>
-                      </div>
-                    </div> <!-- end row -->
-                    <hr>
-                    <div class="row text-center">
-                        <button type="submit" class="btn btn-primary">Checkout</button>
-                    </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
         <!-- END CONTENT -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
