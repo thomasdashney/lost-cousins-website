@@ -159,7 +159,10 @@ function loadShowData(cb) {
       yesterday.setDate(today.getDate()-1);
       for (var id in shows) {
         var show = shows[id];
-        if (show.date.obj < yesterday || (show.announced && show.announced === 'false'))
+        console.log(show);
+        if (!show.date || 
+            (show.date.obj < yesterday) || 
+            (show.announced && show.announced === 'false'))
           delete shows[id]; // delete the show
       }
       shows = _.values(shows); // get an array of shows (no ids)
