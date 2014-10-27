@@ -41,26 +41,26 @@
 
             <!-- Header -->
             <h1 class="hidden">Lost Cousins</h1>
-            <img id="logo-treehouse" class="element" src="./img/logo-treehouse.png" alt="Lost Cousins">
+            <img data-sr id="logo-treehouse" class="element" src="./img/logo-treehouse.png" alt="Lost Cousins">
 
             <!-- Nav Buttons -->
             <div id="main-nav">
                 <a class="scrollnav" href="#players">
-                    <img id="listen-button" class="element" src="./img/buttons/listen-button.png" alt="Go To Music Player">
+                    <img data-sr id="listen-button" class="element" src="./img/buttons/listen-button.png" alt="Go To Music Player">
                 </a>
                 <a class="scrollnav" href="#tour">
-                    <img id="tour-button" class="element" src="./img/buttons/tour-button.png" alt="Go To Tour Dates">
+                    <img data-sr id="tour-button" class="element" src="./img/buttons/tour-button.png" alt="Go To Tour Dates">
                 </a>
                 <a class="scrollnav" href="#media-top">
-                    <img id="media-button" class="element" src="./img/buttons/media-button.png" alt="Go To Media Section">
+                    <img data-sr id="media-button" class="element" src="./img/buttons/media-button.png" alt="Go To Media Section">
                 </a>
             </div>
 
-            <img id="little-fish" class="element" src="./img/little-fish.png">
-            <img id="greeting" class="element" src="./img/greeting.png" alt="Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.">
+            <img data-sr id="little-fish" class="element" src="./img/little-fish.png">
+            <img data-sr id="greeting" class="element" src="./img/greeting.png" alt="Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.">
             <p class="hidden">Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.</p>
 
-            <div id="players" class="element" ng-app="plangular">
+            <div data-sr  id="players" class="element" ng-app="plangular">
                 <a href="http://soundcloud.com/lostcousinsband" target="_blank">
                     <img id="soundcloud-logo" src="./img/player/soundcloud-logo.png" data-toggle="tooltip" data-placement="right" title="Listen on Soundcloud">
                 </a>
@@ -98,35 +98,35 @@
             </div>
             <div id="tour"></div>
             <!-- end players -->
-            <img id="blue-unicorn" class="element" src="./img/tour/blue-unicorn.png" alt="Blue Unicorn">
-            <img id="road" class="element" src="./img/tour/road.png" alt="Road">
-            <img id="orange-narwhal" class="element" src="./img/tour/orange-narwhal.png" alt="Orange Narwhal">
-            <img id="when-are-we" class="element" src="./img/tour/when-are-we.png" alt="When Are We Headed your Way?">
+            <img data-sr id="blue-unicorn" class="element" src="./img/tour/blue-unicorn.png" alt="Blue Unicorn">
+            <img data-sr id="road" class="element" src="./img/tour/road.png" alt="Road">
+            <img data-sr id="orange-narwhal" class="element" src="./img/tour/orange-narwhal.png" alt="Orange Narwhal">
+            <img data-sr id="when-are-we" class="element" src="./img/tour/when-are-we.png" alt="When Are We Headed your Way?">
 
-            <h2 class="hidden">Tour Dates</h2>
+            <h2 data-sr class="hidden">Tour Dates</h2>
 
-            <div id="tour-dates">
+            <div data-sr id="tour-dates">
                 <!-- Tour dates will be dynamically inserted -->
             </div>
             <div id="media">
-                <div id="media-top"></div>
+                <div data-sr id="media-top"></div>
                 <img id="forest" class="element" src="./img/social/forest.png" />
-                <img id="find-the-cousins" class="element" src="./img/social/find-the-cousins.png" />
+                <img data-sr id="find-the-cousins" class="element" src="./img/social/find-the-cousins.png" />
 
                 <!-- social media buttons -->
 
                 <a href="http://twitter.com/lostcousinsband" target="_blank">
-                    <img id="follow-twitter" class="element social-link" src="./img/social/follow-twitter.jpg" />
+                    <img data-sr id="follow-twitter" class="element social-link" src="./img/social/follow-twitter.jpg" />
                 </a>
                 <a href="http://instagram.com/lostcousinsband" target="_blank">
-                    <img id="follow-instagram" class="element social-link" src="./img/social/follow-instagram.jpg" />
+                    <img data-sr id="follow-instagram" class="element social-link" src="./img/social/follow-instagram.jpg" />
                 </a>
                 <a href="http://facebook.com/lostcousinsband" target="_blank">
-                    <img id="like-facebook" class="element social-link" src="./img/social/like-facebook.jpg" />
+                    <img data-sr id="like-facebook" class="element social-link" src="./img/social/like-facebook.jpg" />
                 </a>
                 <!-- end social media buttons -->
 
-                <div class="media-section" id="twitter-feed">
+                <div data-sr class="media-section" id="twitter-feed">
                     <h2>
                         <a href="http://twitter.com/lostcousinsband" target="_blank">
                             Twitter
@@ -150,7 +150,7 @@
                         </script>
                     </div>
                 </div>
-                <div class="media-section" id="instagram-feed">
+                <div data-sr class="media-section" id="instagram-feed">
                     <h2>
                         <a href="http://instagram.com/lostcousinsband" target="_blank">
                             Instagram
@@ -160,7 +160,7 @@
                         <!-- Photos will be dynamically inserted -->
                     </div>
                 </div>
-                <div class="media-section" id="youtube">
+                <div data-sr class="media-section" id="youtube">
                     <h2>
                         <a href="http://youtube.com/lostcousinsband" target="_blank">
                             Videos
@@ -171,7 +171,7 @@
                     </div>
                 </div>
             </div><!-- end media -->
-            <div id="footer">
+            <div data-sr id="footer">
                 <h4>for booking inquiries, email <a href="mailto:lostcousinsband@gmail.com">
                     lostcousinsband@gmail.com
                 </a></h4>
@@ -197,6 +197,18 @@
         <script src="js/main.js"></script>
         <!-- analytics setup -->
         <script src="js/analytics.js"></script>
+
+
+        <!-- enable scroll reveal effect -->
+        <script src="js/vendor/scrollReveal.js"></script>
+        <script>
+            window.sr = new scrollReveal({
+                mobile: false,
+                reset: true,
+                delay: 'once',
+                vFactor: 0.2
+            });
+        </script>
 
         <!-- music player stuff -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
