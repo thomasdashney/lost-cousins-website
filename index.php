@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/layout-mobile.css">
+        <!-- ensure elements are hidden initially (to be revealed) -->
+        <style> [data-sr] { visibility: hidden; } </style>
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
