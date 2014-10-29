@@ -69,7 +69,7 @@
                     <span class="glyphicon glyphicon-cloud-download"></span>
                 </a>
                 <div id="drift">
-                    <div class="player" v-component="plangular" v-src="'http://soundcloud.com/lostcousinsband/feel-an-emotion-live-radio-cut'">
+                    <div class="player" v-component="plangular" v-src="'http://soundcloud.com/lostcousinsband/drift'">
                         <button id="drift-button"></button>
                         <button class="play-pause-button" v-on="click: playPause()">
                           <svg class="play-icon play-pause-icon" v-if="player.playing != track" v-plangular-icon="'play'" opacity=".8"></svg>
