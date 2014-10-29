@@ -65,7 +65,7 @@
                     <img id="soundcloud-logo" src="./img/player/soundcloud-logo.png" data-toggle="tooltip" data-placement="right" title="Listen on Soundcloud">
                 </a>
                 <!-- download button -->
-                <a href="http://lostcousins.bandcamp.com/album/drift-elegy-single?action=buy" target="_blank" id="download-button" data-toggle="tooltip" data-placement="left" title="Download our music!">
+                <a data-toggle="modal" href="#download-modal" data-target="#download-modal" id="download-button" data-toggle="tooltip" data-placement="left" title="Download our music!">
                     <span class="glyphicon glyphicon-cloud-download"></span>
                 </a>
                 <div id="drift">
@@ -185,6 +185,26 @@
             </div>
         </div>
         <!-- /.container -->
+
+        <!-- donate modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body container-fluid text-center">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2>Download Drift</h2>
+                <a href="./Drift.m4a" download>for free</a> or
+                <a target="_blank" href="http://lostcousins.bandcamp.com/album/drift-elegy-single?action=buy">
+                    by donation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
 
         <!-- END CONTENT -->
 
