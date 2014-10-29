@@ -193,8 +193,8 @@
             <div class="modal-content">
               <div class="modal-body container-fluid text-center">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h2>Download Drift</h2>
-                <a href="./Drift.zip" download>for free</a> or
+                <h2>Download Drift &amp; Elegy</h2>
+                <a href="./Drift_Elegy.zip" download>for free</a> or
                 <a target="_blank" href="http://lostcousins.bandcamp.com/album/drift-elegy-single?action=buy">
                     by donation
                 </a>
