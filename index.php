@@ -255,6 +255,11 @@
                         </td>
                         <td>{{location}}</td>
                         <td>
+                            {{#if links.tickets}}
+                            <a href="{{links.tickets}}" target="_blank">
+                                <img src="./img/tour/ticket-icon.png">
+                            </a>
+                            {{/if}}
                             {{#if links.facebook}}
                             <a href="{{links.facebook}}" target="_blank">
                                 <!-- todo: put in facebook icon -->
