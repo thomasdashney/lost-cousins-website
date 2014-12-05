@@ -218,9 +218,13 @@ function getMoreImages(url, cb) {
 function parseInstagramResponse(res) {
   return {
     photos: res.data.map(function(photo) {
+      var caption = '';
+      // there might not be a caption, so only set it if it's there
+      if (photo.caption && photo.caption.text)
+        caption = photo.caption.text;
       return {
         img: photo.images.low_resolution,
-        caption: photo.caption.text,
+        caption: caption,
         time: photo.created_time,
         link: photo.link
       };
