@@ -181,7 +181,9 @@
                     <a href="https://www.behance.net/madisonnewey" target="_blank">
                         mady newey
                     </a>
-                    w/ lost cousins)
+                    w/ lost cousins &amp; maintained on 
+                    <a href="https://github.com/thomasdashney/lost-cousins-website" target="_blank">
+                    github</a>)
                 </p>
             </div>
         </div>
