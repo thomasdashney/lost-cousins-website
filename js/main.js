@@ -1,8 +1,7 @@
 
 
 /**
- * JS code for the music players to play the songs
- * This file is dependent on the inclusion of the soundcloud js sdk
+ * JS code for the site
  */
 
 /* global $ */
