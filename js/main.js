@@ -136,22 +136,22 @@ function loadShowData(cb) {
 
     } // end shows loop
     // get custom show data
-    $.getJSON('shows.json').done(function gotData(customShows) {
-      console.log("customShows");
-      console.log(customShows);
-      // for each id
-      for (var id in customShows) {
-        // convert the date object to the correct format
-        var show = customShows[id];
-        if (show.date) {
-          var date = new Date(show.date);
-          show.date = {
-            obj: date,
-            display: dateFormat(date)
-          };
+    $.getJSON('shows.json').always(function gotData(customShows) {
+      if (customShows) {
+        // for each id
+        for (var id in customShows) {
+          // convert the date object to the correct format
+          var show = customShows[id];
+          if (show.date) {
+            var date = new Date(show.date);
+            show.date = {
+              obj: date,
+              display: dateFormat(date)
+            };
+          }
         }
+        shows = _.merge(shows, customShows); // merge sk shows w/ custom shows
       }
-      shows = _.merge(shows, customShows); // merge sk shows w/ custom shows
       // delete any shows that are too old
       var today = new Date();
       var yesterday = new Date();
