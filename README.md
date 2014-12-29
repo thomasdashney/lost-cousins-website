@@ -13,7 +13,7 @@ Check out Lost Cousins at any of the following networking sites:
 * [Facebook](https://facebook.com/lostcousinsband)
 * [Twitter](https://twitter.com/lostcousinsband)
 * [Instagram](https://instagram.com/lostcousinsband)
-* [Songkick](https://songkick.com/lostcousinsband)
+* [Songkick](https://www.songkick.com/artists/8158333-lost-cousins)
 
 Features
 --------------------
