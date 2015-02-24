@@ -167,8 +167,8 @@
                         </a>
                     </h2>
                     <div id="videos">
+                        <iframe width="640" height="390" src="//www.youtube.com/embed/Vdm79aMVXyA" frameborder="0" allowfullscreen></iframe>
                         <iframe width="640" height="390" src="//www.youtube.com/embed/6wT-VWe_Gx0" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="640" height="390" src="//www.youtube.com/embed/lJGgqes1COc" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div><!-- end media -->
