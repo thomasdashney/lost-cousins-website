@@ -109,6 +109,10 @@ function loadShowData(cb) {
       // get the songkick show object
       var skShow = skShows[i];
 
+      // make sure show isn't cancelled or something
+      if (skShow.status !== 'ok')
+        continue;
+
       // get a date object
       var d = skShow.start.date.split('-');
       var date = new Date(d[0],d[1]-1,d[2]);
