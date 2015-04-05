@@ -18,7 +18,7 @@
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body ng-app="plangular">
         <!-- include facebook sdk for like button -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -69,28 +69,33 @@
                     <span class="glyphicon glyphicon-cloud-download"></span>
                 </a>
                 <div id="drift">
-                    <div class="player" v-component="plangular" v-src="'http://soundcloud.com/lostcousinsband/drift'">
+                    <div class="player" plangular="http://soundcloud.com/lostcousinsband/drift">
                         <button id="drift-button"></button>
-                        <button class="play-pause-button" v-on="click: playPause()">
-                          <svg class="play-icon play-pause-icon" v-if="player.playing != track" v-plangular-icon="'play'" opacity=".8"></svg>
-                          <svg class="pause-icon play-pause-icon" v-if="player.playing == track" v-plangular-icon="'pause'" opacity=".8"></svg>
+                        <button class="play-pause-button" ng-click="playPause()">
+                          <svg class="play-icon play-pause-icon icon geomicon" ng-if="player.playing !== track.src" data-icon="play" opacity=".6">
+                              <path d="M4 4 L28 16 L4 28 z "></path>
+                          </svg>
+                          <svg class="pause-icon play-pause-icon icon geomicon" ng-if="player.playing === track.src" data-icon="pause" opacity=".6">
+                              <path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path>
+                          </svg>
                         </button>
 
-                        <progress class="song-seeker" v-show="player.playing == track" value="{{ currentTime / duration || 0 }}" v-on="click: seek($event)">{{ currentTime / duration }}</progress>
-                        <progress class="song-seeker-not-playing" v-show="player.playing != track" value="{{ currentTime / duration || 0 }}" v-on="click: seek($event)">{{ currentTime / duration }}</progress>  
+                        <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
                     </div>
                 </div>
                 <div id="elegy">
-                    <button id="elegy-button"></button>
-                    <div class="player" v-component="plangular" v-src="'http://soundcloud.com/lostcousinsband/elegy'">
-                        <div id="elegy-player"></div>
-                        <button class="play-pause-button" v-on="click: playPause()">
-                          <svg class="play-icon play-pause-icon" v-if="player.playing != track" v-plangular-icon="'play'" opacity=".8"></svg>
-                          <svg class="pause-icon play-pause-icon" v-if="player.playing == track" v-plangular-icon="'pause'" opacity=".8"></svg>
+                    <div class="player" plangular="http://soundcloud.com/lostcousinsband/elegy">
+                        <button id="elegy-button"></button>
+                        <button class="play-pause-button" ng-click="playPause()">
+                          <svg class="play-icon play-pause-icon icon geomicon" ng-if="player.playing !== track.src" data-icon="play" opacity=".6">
+                              <path d="M4 4 L28 16 L4 28 z "></path>
+                          </svg>
+                          <svg class="pause-icon play-pause-icon icon geomicon" ng-if="player.playing === track.src" data-icon="pause" opacity=".6">
+                              <path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path>
+                          </svg>
                         </button>
 
-                        <progress class="song-seeker" v-show="player.playing == track" value="{{ currentTime / duration || 0 }}" v-on="click: seek($event)">{{ currentTime / duration }}</progress>
-                        <progress class="song-seeker-not-playing" v-show="player.playing != track" value="{{ currentTime / duration || 0 }}" v-on="click: seek($event)">{{ currentTime / duration }}</progress>  
+                        <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
                     </div>
                 </div>
 
@@ -222,8 +227,8 @@
         <script src="js/analytics.js"></script>
 
         <!-- music player stuff -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
-        <script src="js/vendor/v-plangular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="js/vendor/plangular.min.js"></script>
         <!-- templating -->
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
 
@@ -284,12 +289,6 @@
                 </div>
             {{/if}}
 
-        </script>
-
-
-
-        <script> 
-            var vm = new Vue({ el: '#players' });
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
