@@ -67,46 +67,11 @@ body {
 }
 
 // music player
-#players {
+#player {
 	background-image: url(../img/player/player-bg.png);
 	width: 457px;
 	height: 375px;
 	position: relative;
-
-	button.play-pause-button {
-		margin-top: 44px;
-		margin-left: 5px;
-	    background: none;
-	    border: none;
-	    outline: none;
-	}
-
-	.play-pause-button .play-pause-icon {
-    	width: 30px;
-    	height: 30px;
-	}
-
-	progress {
-		margin-top: 90px;
-		width: 160px;
-		height: 14px;
-		-webkit-appearance: none;
-		border: none;
-
-		&.song-seeker::-webkit-progress-bar {
-			background: rgba(0, 0, 0, 0.6);
-			border-radius: 50px;
-			padding: 2px;
-			box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
-		}
-
-		&.song-seeker-not-playing::-webkit-progress-bar {
-			background: rgba(0, 0, 0, 0.3); // lighter
-			border-radius: 50px;
-			padding: 2px;
-			box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
-		}
-	}
 
 	// soundcloud-logo
 	img#soundcloud-logo {
@@ -131,12 +96,76 @@ body {
 		}
 	}
 	
+	#track-listing {
+		font-size: 1em;
+		position: relative;
+		left: 180px;
+		top: 30px;
+		width: 200px;
+		text-align: center;
+		ul {
+			list-style: none;
+			padding-left: 0px;
+		}
+		button {
+			background-color: transparent;
+			border: none;
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+		}
+	}
 
-	#drift {
+	#song-player {
 		position: absolute;
-		top: 14px;
-		left: 200px;
-		
+		top: 194px;
+		left: 170px;
+
+		button.play-pause-button {
+			position: absolute;
+			margin-top: 30px;
+			margin-left: 64px;
+		    background: none;
+		    border: none;
+		    outline: none;
+		}
+
+		button.next-track-button {
+			position: absolute;
+			margin-top: 44px;
+			margin-left: 120px;
+		    background: none;
+		    border: none;
+		    outline: none;			
+		}
+
+		.next-track-icon, .play-pause-icon {
+			height: 60px;
+		}
+
+		progress {
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 34px;
+			width: 150px;
+			height: 14px;
+			-webkit-appearance: none;
+			border: none;
+
+			&.song-seeker::-webkit-progress-bar {
+				background: rgba(0, 0, 0, 0.6);
+				border-radius: 50px;
+				padding: 2px;
+				box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+			}
+
+			&.song-seeker-not-playing::-webkit-progress-bar {
+				background: rgba(0, 0, 0, 0.3); // lighter
+				border-radius: 50px;
+				padding: 2px;
+				box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+			}
+		}
 		progress::-webkit-progress-value {
 			border-radius: 50px;
 			box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -145,43 +174,7 @@ body {
 				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
 			  -webkit-linear-gradient(left, #5cbeff, #8acefc);
 		}
-	}
-
-	#elegy {
-		position: absolute;
-		top: 194px;
-		left: 200px;
-		
-		progress::-webkit-progress-value {
-			border-radius: 50px;
-			box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-			background:
-				-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
-				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-			  -webkit-linear-gradient(left, #ff9c6d, #fdcbb2);
-		}
-	}
-
-	// buttons
-	button {
-		border: none;
-		position: absolute;
-		background-color: transparent;
-	}
-	button#drift-button {
-		background: url(../img/player/drift-text.png);
-		margin-top: 34px;
-		margin-left: 40px;
-		width: 120px;
-		height: 48px;
-	}
-	button#elegy-button {
-		background: url(../img/player/elegy-text.png);
-		margin-top: 30px;
-		margin-left: 40px;
-		width: 110px;
-		height: 59px;
-	}
+	}	
 }
 
 // tour dates table

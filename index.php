@@ -18,7 +18,7 @@
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body ng-app="plangular">
+    <body>
         <!-- include facebook sdk for like button -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -60,7 +60,7 @@
             <img id="greeting" class="element" src="./img/greeting.png" alt="Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.">
             <p class="hidden">Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.</p>
 
-            <div id="players" class="element" ng-app="plangular">
+            <div id="player" class="element" ng-app="plangular" plangular="https://soundcloud.com/lostcousinsband/sets/limestone-city-mixtape">
                 <a href="http://soundcloud.com/lostcousinsband" target="_blank">
                     <img id="soundcloud-logo" src="./img/player/soundcloud-logo.png" data-toggle="tooltip" data-placement="right" title="Listen on Soundcloud">
                 </a>
@@ -68,38 +68,38 @@
                 <a data-toggle="modal" href="#download-modal" data-target="#download-modal" id="download-button" data-toggle="tooltip" data-placement="left" title="Download our music!">
                     <span class="glyphicon glyphicon-cloud-download"></span>
                 </a>
-                <div id="drift">
-                    <div class="player" plangular="http://soundcloud.com/lostcousinsband/drift">
-                        <button id="drift-button"></button>
-                        <button class="play-pause-button" ng-click="playPause()">
-                          <svg class="play-icon play-pause-icon icon geomicon" ng-if="player.playing !== track.src" data-icon="play" opacity=".6">
+
+                <div id="track-listing">
+                  <ul>
+                    <li ng-repeat="track in tracks">
+                      <button
+                        title="Play {{track.title}}"
+                        ng-class="{'is-active': player.playing === track.src }"
+                        ng-click="playPause($index)">
+                          {{track.title}}
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div id="song-player">
+                    <div class="player">
+                        <button title="Play/Pause" class="play-pause-button" ng-click="playPause(index)">
+                          <svg class="play-icon play-pause-icon icon geomicon" ng-if="player.playing !== track.src" viewBox="0 0 32 32" data-icon="play" opacity=".6">
                               <path d="M4 4 L28 16 L4 28 z "></path>
                           </svg>
-                          <svg class="pause-icon play-pause-icon icon geomicon" ng-if="player.playing === track.src" data-icon="pause" opacity=".6">
+                          <svg class="pause-icon play-pause-icon icon geomicon" ng-if="player.playing === track.src" viewBox="0 0 32 32"  data-icon="pause" opacity=".6">
                               <path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path>
+                          </svg>
+                        </button>
+                        <button title="Play Next Track" class="next-track-button" ng-click="next()">
+                          <svg class="next-track-icon icon geomicon" data-icon="next" opacity=".6">
+                            <path d="M4 4 L24 14 V4 H28 V28 H24 V18 L4 28 z "></path>
                           </svg>
                         </button>
 
                         <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
                     </div>
-                </div>
-                <div id="elegy">
-                    <div class="player" plangular="http://soundcloud.com/lostcousinsband/elegy">
-                        <button id="elegy-button"></button>
-                        <button class="play-pause-button" ng-click="playPause()">
-                          <svg class="play-icon play-pause-icon icon geomicon" ng-if="player.playing !== track.src" data-icon="play" opacity=".6">
-                              <path d="M4 4 L28 16 L4 28 z "></path>
-                          </svg>
-                          <svg class="pause-icon play-pause-icon icon geomicon" ng-if="player.playing === track.src" data-icon="pause" opacity=".6">
-                              <path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path>
-                          </svg>
-                        </button>
-
-                        <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
-                    </div>
-                </div>
-
-                
+                </div>                
             </div>
             <div id="tour"></div>
             <!-- end players -->
