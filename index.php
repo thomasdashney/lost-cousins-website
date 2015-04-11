@@ -201,18 +201,15 @@
             <div class="modal-content">
               <div class="modal-body container-fluid text-center">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h2>Download Drift &amp; Elegy</h2>
-                <a href="./Drift_Elegy.zip" download>for free</a> or
-                <a target="_blank" href="http://lostcousins.bandcamp.com/album/drift-elegy-single?action=buy">
+                <h2>Download Our Debut EP</h2>
+                <a href="./Lost Cousins - Not Now What We Were (2015).zip" download>for free</a> or
+                <a target="_blank" href="http://lostcousins.bandcamp.com/album/not-now-what-we-were?action=buy">
                     by donation
                 </a>
               </div>
             </div>
           </div>
         </div>
-
-
-
 
         <!-- END CONTENT -->
 
