@@ -69,6 +69,7 @@ body {
 // music player
 #player {
 	background-image: url(../img/player/player-bg.png);
+	background-repeat: no-repeat;
 	width: 457px;
 	height: 375px;
 	position: relative;
@@ -97,11 +98,11 @@ body {
 	}
 	
 	#track-listing {
-		font-size: 1em;
+		font-size: 0.9em;
 		position: relative;
-		left: 180px;
-		top: 30px;
-		width: 200px;
+		left: 160px;
+		top: 35px;
+		width: 240px;
 		text-align: center;
 		ul {
 			list-style: none;
@@ -112,6 +113,9 @@ body {
 			border: none;
 			&:hover, &:focus {
 				text-decoration: underline;
+			}
+			&.is-active {
+				color: #428bca;
 			}
 		}
 	}

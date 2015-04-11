@@ -60,7 +60,7 @@
             <img id="greeting" class="element" src="./img/greeting.png" alt="Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.">
             <p class="hidden">Hello, we are Lost Cousins, nice to meet you. Have a listen to our songs.</p>
 
-            <div id="player" class="element" ng-app="plangular" plangular="https://soundcloud.com/lostcousinsband/sets/limestone-city-mixtape">
+            <div id="player" class="element" ng-app="plangular" plangular="https://soundcloud.com/lostcousinsband/sets/not-now-what-we-were-2015">
                 <a href="http://soundcloud.com/lostcousinsband" target="_blank">
                     <img id="soundcloud-logo" src="./img/player/soundcloud-logo.png" data-toggle="tooltip" data-placement="right" title="Listen on Soundcloud">
                 </a>
