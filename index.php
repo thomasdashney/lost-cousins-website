@@ -229,6 +229,10 @@
         <!-- templating -->
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
 
+        <script>
+            $('#download-modal').modal('show');
+        </script>
+
         <script id="show-template" type="text/x-handlebars-template">
             {{#if shows}}
                 <table>
