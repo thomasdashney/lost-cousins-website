@@ -230,14 +230,7 @@
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
 
         <script>
-            (function loadModal() {
-                if (typeof(Storage) === "undefined")
-                    return;
-                if (localStorage.hasVisited)
-                    return;
-                $('#download-modal').modal('show');
-                localStorage.hasVisited = true;
-            })();
+            $('#download-modal').modal('show');
         </script>
 
         <script id="show-template" type="text/x-handlebars-template">
