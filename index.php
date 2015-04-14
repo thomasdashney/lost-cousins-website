@@ -41,7 +41,9 @@
 
             <!-- Header -->
             <h1 class="hidden">Lost Cousins</h1>
-            <img id="logo-treehouse" class="element" src="./img/logo-treehouse.png" alt="Lost Cousins">
+            <a href="#">
+                <img data-toggle="modal" href="#download-modal" data-target="#download-modal" id="logo-treehouse" class="element" src="./img/logo-treehouse.png" alt="Lost Cousins">
+            </a>
 
             <!-- Nav Buttons -->
             <div id="main-nav">
