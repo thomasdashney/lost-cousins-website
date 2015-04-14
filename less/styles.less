@@ -43,6 +43,8 @@ body {
 	background-attachment: fixed;
 
 	font-family: 'rabioheadregular', 'Trebuchet MS', Helvetica, sans-serif;
+
+	max-width: 100%;
 }
 
 // fixing the container widths
@@ -70,7 +72,7 @@ body {
 #player {
 	background-image: url(../img/player/player-bg.png);
 	background-repeat: no-repeat;
-	width: 457px;
+	width: 400px;
 	height: 375px;
 	position: relative;
 
@@ -104,6 +106,7 @@ body {
 		top: 35px;
 		width: 240px;
 		text-align: center;
+		margin: 0px;
 		ul {
 			list-style: none;
 			padding-left: 0px;
@@ -145,6 +148,7 @@ body {
 
 		.next-track-icon, .play-pause-icon {
 			height: 60px;
+			width: 40px; // override because it was 300 for some reason
 		}
 
 		progress {
