@@ -204,10 +204,16 @@
               <div class="modal-body container-fluid text-center">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h2>Download Our Debut EP</h2>
-                <a href="./Lost Cousins - Not Now What We Were (2015).zip" download>for free</a> or
-                <a target="_blank" href="http://lostcousins.bandcamp.com/album/not-now-what-we-were?action=buy">
-                    by donation
-                </a>
+                <p>
+                    <a href="./Lost Cousins - Not Now What We Were (2015).zip" download>for free</a> or
+                    <a target="_blank" href="http://lostcousins.bandcamp.com/album/not-now-what-we-were?action=buy">
+                        by donation
+                    </a>
+                </p>
+                <hr>
+                <p>
+                    also we'd <span class="glyphicon glyphicon-heart-empty"></span> if you could <a target="_blank" href="http://music.cbc.ca/#!/artists/Lost-Cousins">take a second to vote for us in the CBC searchlight contest</a>
+                </p>
               </div>
             </div>
           </div>
