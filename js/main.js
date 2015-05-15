@@ -64,9 +64,15 @@ $(document).ready(function() {
 
   $('#free-download-link').click(function() {
     var email = $emailField.val();
-    $.post('php/submit_email.php', {email: email}).then(function(data) {
-      console.log(data);
-    });
+    $.post('php/submit_email.php', {email: email})
+      .then(function(data) {
+        console.log('Email post successful');
+        console.log(data)
+      })
+      .fail(function(data, status, error) {
+        console.log('Email post failed');
+        console.log(error);
+      });
     $('#free-download-modal').modal('hide');
   });
 

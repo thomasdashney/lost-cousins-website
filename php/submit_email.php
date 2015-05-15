@@ -19,4 +19,6 @@
 	$stmt->bind_param('s', $_POST['email']);
 	$stmt->execute();
 	$db->close();
+
+	echo 'Success';
 ?>

@@ -222,7 +222,7 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <p>enter your email to enable download</p>
                 <input placeholder="e.g. john.smith@gmail.com" class="email-field form-control">
-                <a href="./Lost Cousins - Not Now What We Were (2015).zip" id="free-download-link" class="btn btn-primary disabled" download>Download</a>
+                <a href="./Lost Cousins - Not Now What We Were (2015).zip" id="free-download-link" class="btn btn-primary disabled" target="_blank">Download</a>
               </div>
             </div>
           </div>
