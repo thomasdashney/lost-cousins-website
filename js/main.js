@@ -162,7 +162,6 @@ function loadShowData(cb) {
       yesterday.setDate(today.getDate()-1);
       for (var id in shows) {
         var show = shows[id];
-        console.log(show);
         if (!show.date || 
             (show.date.obj < yesterday) || 
             (show.announced && show.announced === 'false'))
