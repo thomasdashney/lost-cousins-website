@@ -29,6 +29,49 @@ $(document).ready(function() {
   // download button
   $downloadButton = $('#download-button');
 
+  $('.free-download-link').click(function() {
+    $('#download-modal').modal('hide'); // hide current modal
+    // when it's hidden, open the other modal
+    $('#download-modal').on('hidden.bs.modal', function () {
+      $('#download-modal').off('hidden.bs.modal'); // prevent future func exec
+      // make new modal come up
+      $('#free-download-modal').modal('show');
+    });
+  });
+
+  // make sure email field closes when modal is closed
+  $('#free-download-modal').on('shown.bs.modal', function() {
+    $('#free-download-modal .email-field').val('');
+  });
+
+  // when a valid email is entered, enable download link
+  $emailField = $('#free-download-modal .email-field');
+  $emailField.data('oldVal', $emailField.val());
+  $emailField.on('propertychange change click keyup input paste', function() {
+    if ($emailField.data('oldVal') != $emailField.val()) {
+      $emailField.data('oldVal', $emailField.val());
+      var input = $emailField.val();
+      if (isValidEmail(input))
+        $('#free-download-link').removeClass('disabled');
+      else
+        $('#free-download-link').addClass('disabled');
+    }
+  });
+  function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+
+  $('#free-download-link').click(function() {
+    var email = $emailField.val();
+    $.post('php/submit_email.php', {email: email}).then(function(data) {
+      console.log(data);
+    });
+    $('#free-download-modal').modal('hide');
+  });
+
+  // when free download is clicked, post email to server and start download
+
   // blink download button whenever you click play
   $('.play-pause-button').click(function() {
     if (sessionStorage && !sessionStorage.hasPressedPlayOnce) {

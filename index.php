@@ -196,18 +196,33 @@
         </div>
         <!-- /.container -->
 
-        <!-- donate modal -->
+        <!-- download modal -->
         <!-- Modal -->
-        <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="download-label" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body container-fluid text-center">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h2>Download Our Debut EP</h2>
-                <a href="./Lost Cousins - Not Now What We Were (2015).zip" download>for free</a> or
+                <a href="#free-download" class="free-download-link">for free</a> or
                 <a target="_blank" href="http://lostcousins.bandcamp.com/album/not-now-what-we-were?action=buy">
                     by donation
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- free download modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="free-download-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body container-fluid text-center">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <p>enter your email to enable download</p>
+                <input placeholder="e.g. john.smith@gmail.com" class="email-field form-control">
+                <a href="./Lost Cousins - Not Now What We Were (2015).zip" id="free-download-link" class="btn btn-primary disabled" download>Download</a>
               </div>
             </div>
           </div>
