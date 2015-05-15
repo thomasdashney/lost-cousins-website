@@ -174,8 +174,8 @@
                         </a>
                     </h2>
                     <div id="videos">
-                        <iframe width="640" height="390" src="//www.youtube.com/embed/Vdm79aMVXyA" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="640" height="390" src="//www.youtube.com/embed/6wT-VWe_Gx0" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/126845367" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/127674282" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </div><!-- end media -->
