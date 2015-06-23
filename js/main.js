@@ -195,12 +195,18 @@ function loadShowData(cb) {
         for (var id in customShows) {
           // convert the date object to the correct format
           var show = customShows[id];
-          if (show.date) {
+          if (show.date && !show.dateDisplay) {
             var date = new Date(show.date);
             show.date = {
               obj: date,
               display: dateFormat(date)
             };
+          }
+          else if (show.dateDisplay) {
+            show.date = {
+              display: show.dateDisplay
+            }
+            delete show.dateDisplay;
           }
         }
         shows = _.merge(shows, customShows); // merge sk shows w/ custom shows
