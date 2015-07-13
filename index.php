@@ -75,6 +75,7 @@
                   <ul>
                     <li ng-repeat="track in tracks">
                       <button
+                        class="song-button"
                         title="Play {{track.title}}"
                         ng-class="{'is-active': player.playing === track.src }"
                         ng-click="playPause($index)">
@@ -236,7 +237,6 @@
         <script src="js/vendor/customize-twitter-1.1.min.js" type="text/javascript"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/lodash.compat.min.js"></script>
-        <script src="js/main.js"></script>
         <!-- analytics setup -->
         <script src="js/analytics.js"></script>
 
@@ -245,6 +245,8 @@
         <script src="js/vendor/plangular.min.js"></script>
         <!-- templating -->
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
+        
+        <script src="js/main.js"></script>
 
         <script>
             $('#download-modal').modal('show');

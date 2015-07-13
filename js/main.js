@@ -12,6 +12,19 @@ var instagramPendingReload = false;
 var nextInstagramUrl = false; // set initial nextUrl
 
 $(document).ready(function() {
+  window.hasPlayedMusic = false;
+  // increment the track playlist to track 2 (feel an emotion)
+  // if the play button is pressed before any music has played
+  var player = angular.element(document.getElementById('player')).scope();
+  player.audio.addEventListener('playing', function() {
+      window.hasPlayedMusic = true;
+  });
+  $('.play-pause-button').one('click', function() {
+      if (!window.hasPlayedMusic) {
+          player.next();
+      }
+  });
+
   // navigation link scrolling
   $( 'a.scrollnav' ).click(function(event) {
     event.preventDefault();
