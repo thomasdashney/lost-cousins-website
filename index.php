@@ -224,6 +224,11 @@
                 <p>enter your email to enable download</p>
                 <input placeholder="e.g. john.smith@gmail.com" class="email-field form-control">
                 <a href="./Lost Cousins - Not Now What We Were (2015).zip" id="free-download-link" class="btn btn-primary disabled" target="_blank">Download</a>
+                <p class="signup-notice">
+                    by downloading, you agree to opt-in to the LC mailing list
+                    <br>
+                    (feel free to unsubscribe at any time!)
+                </p>
               </div>
             </div>
           </div>
