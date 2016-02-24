@@ -23,20 +23,33 @@ Features
 * Customized twitter feed using [this widget](https://github.com/kevinburke/customize-twitter-1.1)
 * Completely custom-built instagram feed
 
-Set Up
+Set Up (Development)
 ---------------------
 
-* To set up for development, fork this repo and clone locally.
-* _Important_: The project uses LESS and compiles to CSS. I made use of a simple less-watch-compiler, which can be found [here](https://github.com/jonycheung/Dead-Simple-LESS-Watch-Compiler). If you have node.js installed on your machine, `cd` into the project directory and run `node less-watch-compiler less css`. This will auto-compile any .less files in the `less` directory into the `css` directory.
-
+* Fork this repo and clone locally: `git checkout https://github.com/thomasdashney/lost-cousins-website.git`
+* The project uses LESS and compiles to CSS. I made use of a simple less-watch-compiler, which can be found [here](https://github.com/jonycheung/Dead-Simple-LESS-Watch-Compiler).
+    * Install node.js
+		* Install less on your machine: `npm install -g less`
+		* Run the watch compiler: `node less-watch-compiler styles public/less`
+* To set up a simple LAMP server, you can use the provided vagrant file (courtesy of [scotch-box](https://github.com/scotch-io/scotch-box)).
+    * Install [Vagrant](https://www.vagrantup.com/downloads.html)
+    * Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
+    * `cd` into `lost-cousins-website` and run `vagrant up`
+    * The site is now live at `http://192.168.33.10/`
+* To setup the database:
+    * `vagrant ssh` to gain access to the box
+    * `cd /var/www` to go to the repository's files. Only the `public` folder here is exposed via the HTTP server.
+    * Run the following two commands from the command line to setup the database directly from the command line. When prompted, the database password is `root`
+        * `mysql -u root -p -e "create database lost_cousins"`
+        * `mysql -u root -p lost_cousins < db/structure.sql`
 
 Songkick Listing
 ---------------------
 
-You can add/modify the data pulled in by songkick by adding a `shows.json` file to the root of the project directory root. An example would be the following: 
+You can add/modify the data pulled in by songkick by adding a `public/shows.json`. An example would be the following:
 ```json
 {
-    
+
 	"brooklyn-gig": {
 		"date": "Nov 28 2014",
 		"venue": {
