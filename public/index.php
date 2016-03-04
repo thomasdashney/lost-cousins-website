@@ -12,6 +12,7 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link rel="stylesheet" href="css/splash.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/layout-mobile.css">
@@ -33,6 +34,9 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <!-- SPLASH -->
+        <?php include 'views/splash.php'; ?>
 
         <!-- BEGIN CONTENT -->
         <!-- background image -->
@@ -102,7 +106,7 @@
 
                         <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
                     </div>
-                </div>                
+                </div>
             </div>
             <div id="tour"></div>
             <!-- end players -->
@@ -141,7 +145,7 @@
                         </a>
                     </h2>
                     <div id="tweets">
-                        <a class="twitter-timeline" 
+                        <a class="twitter-timeline"
                             data-chrome="noheader noborders transparent nofooter"
                             data-link-color="#8e1d08"
                             data-dnt="true"
@@ -185,11 +189,11 @@
                     lostcousinsband@gmail.com
                 </a></h4>
                 <p>
-                    (site designed by 
+                    (site designed by
                     <a href="https://www.behance.net/madisonnewey" target="_blank">
                         mady newey
                     </a>
-                    w/ lost cousins &amp; maintained on 
+                    w/ lost cousins &amp; maintained on
                     <a href="https://github.com/thomasdashney/lost-cousins-website" target="_blank">
                     github</a>)
                 </p>
@@ -250,12 +254,9 @@
         <script src="js/vendor/plangular.min.js"></script>
         <!-- templating -->
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
-        
-        <script src="js/main.js"></script>
 
-        <script>
-            $('#download-modal').modal('show');
-        </script>
+        <script src="js/main.js"></script>
+        <script src="js/splash.js"></script>
 
         <script id="show-template" type="text/x-handlebars-template">
             {{#if shows}}

@@ -36,8 +36,8 @@
 }
 
 // background stuff
-html { 
-  background: url(../img/man-tree-bg.jpg) no-repeat center center fixed; 
+html {
+  background: url(../img/man-tree-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,8 +45,18 @@ html {
 }
 body {
 	background-color: transparent;
+  height: 100%;
 	font-family: 'rabioheadregular', 'Trebuchet MS', Helvetica, sans-serif;
 	max-width: 100%;
+}
+
+button.link-style {
+   background: none !important;
+   border: none;
+   padding: 0 !important;
+   font: inherit;
+   cursor: pointer;
+   outline: none;
 }
 
 // fixing the container widths
@@ -100,7 +110,7 @@ body {
 			opacity: 0.6;
 		}
 	}
-	
+
 	#track-listing {
 		font-size: 0.9em;
 		position: relative;
@@ -145,7 +155,7 @@ body {
 			margin-left: 120px;
 		    background: none;
 		    border: none;
-		    outline: none;			
+		    outline: none;
 		}
 
 		.next-track-icon, .play-pause-icon {
@@ -184,18 +194,18 @@ body {
 				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
 			  -webkit-linear-gradient(left, #5cbeff, #8acefc);
 		}
-	}	
+	}
 }
 
 // tour dates table
 
 table {
 	width: 100%;
-	border-collapse: separate; 
+	border-collapse: separate;
 	border-spacing: 0 10px;
 	tr {
 		background-color: rgb(248,248,248); // fallback
-		background-color: rgba(248,248,248,0.8); // 
+		background-color: rgba(248,248,248,0.8); //
 	}
 	th {
 		text-align: center;
