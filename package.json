@@ -1,0 +1,23 @@
+{
+  "name": "lost-cousins-website",
+  "version": "1.0.0",
+  "description": "Lost Cousins band website",
+  "scripts": {
+    "start": "node less-watch-compiler styles public/less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasdashney/lost-cousins-website.git"
+  },
+  "keywords": [
+    "lost",
+    "cousins",
+    "music"
+  ],
+  "author": "Thomas Dashney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasdashney/lost-cousins-website/issues"
+  },
+  "homepage": "https://github.com/thomasdashney/lost-cousins-website#readme"
+}
