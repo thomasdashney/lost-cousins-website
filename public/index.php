@@ -60,6 +60,12 @@
                 <a class="scrollnav" href="#media-top">
                     <img id="social-button" class="element" src="./img/buttons/social-button.png" alt="Go To Social Section">
                 </a>
+                <a class="scrollnav" href="#youtube">
+                    <img id="video-button" class="element" src="./img/buttons/video-button.png" alt="Go To Video Section">
+                </a>
+                <a href="https://www.bandfan.co/collections/lost-cousins-band-merchandise/" target="_blank">
+                    <img id="merch-button" class="element" src="./img/buttons/merch-button.png" alt="Go To Merch Section">
+                </a>
             </div>
 
             <img id="little-fish" class="element" src="./img/little-fish.png">
