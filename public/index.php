@@ -137,7 +137,15 @@
                 <a href="http://facebook.com/lostcousinsband" target="_blank">
                     <img id="like-facebook" class="element social-link" src="./img/social/like-facebook.jpg" />
                 </a>
+
               </div><!-- end forest -->
+
+              <form id="mailing-list-form">
+              <button id="mailing-list-submit-button" type="submit" class="btn btn-primary">Join Mailing List</button>
+                <div id="mailing-list-input-container">
+                  <input type="text" placeholder="ex. your.name@gmail.com" />
+                </div>
+              </form>
 
               <div class="media-section page-section" id="twitter-feed">
                   <h2>
