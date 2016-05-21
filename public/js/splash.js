@@ -45,11 +45,20 @@ $(function () {
     $player.fadeIn(3000)
   })
 
-  $('#scroll-down-button, #continue-to-site-button').click(function () {
-    $('html, body').animate({
-      scrollTop: $('#content').offset().top
-    }, 1500);
-  })
+  $('#scroll-down-button, #continue-to-site-button').click(scrollToSite)
+
+  var ESCAPE_KEY = 27
+  $(document).keyup(function(e) {
+    if (e.keyCode === ESCAPE_KEY && $(document).scrollTop() === 0) {
+      scrollToSite()
+    }
+  });
 
   return;
 })
+
+function scrollToSite () {
+  $('html, body').animate({
+    scrollTop: $('#content').offset().top
+  }, 1500);
+}
