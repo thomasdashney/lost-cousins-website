@@ -58,7 +58,7 @@
                     <img id="tour-button" class="element" src="./img/buttons/tour-button.png" alt="Go To Tour Dates">
                 </a>
                 <a class="scrollnav" href="#media-top">
-                    <img id="media-button" class="element" src="./img/buttons/media-button.png" alt="Go To Media Section">
+                    <img id="social-button" class="element" src="./img/buttons/social-button.png" alt="Go To Social Section">
                 </a>
             </div>
 
