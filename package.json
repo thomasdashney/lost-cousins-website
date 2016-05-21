@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Lost Cousins band website",
   "scripts": {
-    "start": "node less-watch-compiler styles public/less"
+    "start": "node less-watch-compiler ./styles ./public/css"
   },
   "repository": {
     "type": "git",
