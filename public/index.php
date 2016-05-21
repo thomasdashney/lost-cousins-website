@@ -51,7 +51,7 @@
 
             <!-- Nav Buttons -->
             <div id="main-nav">
-                <a class="scrollnav" href="#players">
+                <a class="scrollnav" href="#player">
                     <img id="listen-button" class="element" src="./img/buttons/listen-button.png" alt="Go To Music Player">
                 </a>
                 <a class="scrollnav" href="#tour">
