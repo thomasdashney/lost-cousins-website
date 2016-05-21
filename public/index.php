@@ -121,8 +121,9 @@
                 <!-- Tour dates will be dynamically inserted -->
             </div>
             <div id="media">
+              <div id="forest">
                 <div id="media-top"></div>
-                <img id="forest" class="element" src="./img/social/forest.png" />
+                <img id="forest" src="./img/social/forest.png" />
                 <img id="find-the-cousins" class="element" src="./img/social/find-the-cousins.png" />
 
                 <!-- social media buttons -->
@@ -136,55 +137,55 @@
                 <a href="http://facebook.com/lostcousinsband" target="_blank">
                     <img id="like-facebook" class="element social-link" src="./img/social/like-facebook.jpg" />
                 </a>
-                <!-- end social media buttons -->
+              </div><!-- end forest -->
 
-                <div class="media-section" id="twitter-feed">
-                    <h2>
-                        <a href="http://twitter.com/lostcousinsband" target="_blank">
-                            Twitter
-                        </a>
-                    </h2>
-                    <div id="tweets">
-                        <a class="twitter-timeline"
-                            data-chrome="noheader noborders transparent nofooter"
-                            data-link-color="#8e1d08"
-                            data-dnt="true"
-                            data-widget-id="511362229178871808"
-                            height="500"
-                            href="https://twitter.com/LostCousinsBand"></a>
+              <div class="media-section page-section" id="twitter-feed">
+                  <h2>
+                      <a href="http://twitter.com/lostcousinsband" target="_blank">
+                          Twitter
+                      </a>
+                  </h2>
+                  <div id="tweets">
+                      <a class="twitter-timeline"
+                          data-chrome="noheader noborders transparent nofooter"
+                          data-link-color="#8e1d08"
+                          data-dnt="true"
+                          data-widget-id="511362229178871808"
+                          height="500"
+                          href="https://twitter.com/LostCousinsBand"></a>
 
-                        <script>
-                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-                                if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
-                                js.src="//platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js,fjs);}
-                            }(document,"script","twitter-wjs");
-                        </script>
-                    </div>
-                </div>
-                <div class="media-section" id="instagram-feed">
-                    <h2>
-                        <a href="http://instagram.com/lostcousinsband" target="_blank">
-                            Instagram
-                        </a>
-                    </h2>
-                    <div id="instagram-photos">
-                        <!-- Photos will be dynamically inserted -->
-                    </div>
-                </div>
-                <div class="media-section" id="youtube">
-                    <h2>
-                        <a href="http://youtube.com/lostcousinsband" target="_blank">
-                            Videos
-                        </a>
-                    </h2>
-                    <div id="videos">
-                        <iframe src="https://player.vimeo.com/video/135092427" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        <iframe src="https://player.vimeo.com/video/126845367" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-                </div>
+                      <script>
+                          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+                              if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+                              js.src="//platform.twitter.com/widgets.js";
+                              fjs.parentNode.insertBefore(js,fjs);}
+                          }(document,"script","twitter-wjs");
+                      </script>
+                  </div>
+              </div>
+              <div class="media-section page-section" id="instagram-feed">
+                  <h2>
+                      <a href="http://instagram.com/lostcousinsband" target="_blank">
+                          Instagram
+                      </a>
+                  </h2>
+                  <div id="instagram-photos">
+                      <!-- Photos will be dynamically inserted -->
+                  </div>
+              </div>
+              <div class="media-section page-section" id="youtube">
+                  <h2>
+                      <a href="http://youtube.com/lostcousinsband" target="_blank">
+                          Videos
+                      </a>
+                  </h2>
+                  <div id="videos">
+                      <iframe src="https://player.vimeo.com/video/135092427" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      <iframe src="https://player.vimeo.com/video/126845367" width="640" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+              </div>
             </div><!-- end media -->
-            <div id="footer">
+            <div id="footer" class="page-section">
                 <h4>for booking inquiries, email <a href="mailto:lostcousinsband@gmail.com">
                     lostcousinsband@gmail.com
                 </a></h4>

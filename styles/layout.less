@@ -93,43 +93,52 @@
 		margin-left: 50px;
 	}
 
+  .page-section {
+		background-color: rgb(248,248,248); // fallback
+		background-color: rgba(248,248,248,0.8);
+  }
+
+  @page-section-width: 708px;
+
 	#media {
 		position: relative;
-		height: 2040px;
-		img#forest {
-			z-index: -3;
-			top: -80px;
-			left: 70px;
-		}
-		img#find-the-cousins {
-			z-index: -2;
-			top: 300px;
-			left: 350px;
-		}
-		// social media buttons
-		img#follow-twitter {
-			top: 40px;
-			left: 475px;
-		}
-		img#like-facebook {
-			top: 180px;
-			left: 65px;
-		}
-		img#follow-instagram {
-			top: 440px;
-			left: 525px;
-		}
 
+		#forest {
+      height: 700px;
+			img#forest {
+				z-index: -3;
+				margin-left: 70px;
+        height: auto;
+			}
+			img#find-the-cousins {
+				z-index: -2;
+				top: 350px;
+				left: 350px;
+			}
+			// social media buttons
+			img#follow-twitter {
+				top: 40px;
+				left: 475px;
+			}
+			img#like-facebook {
+				top: 180px;
+				left: 65px;
+			}
+			img#follow-instagram {
+				top: 440px;
+				left: 525px;
+			}
+		}
+  /*
 		#media-top { // for scroll link
 			position: absolute;
 			top: 50px;
 		}
+  */
 
 		.media-section {
-			position: absolute;
-			// common styles
-			background-color: rgb(248,248,248); // fallback
-			background-color: rgba(248,248,248,0.8);
+      display: inline-block;
+      vertical-align: top;
 			text-align: center;
 
 			h2 {
@@ -143,19 +152,19 @@
 				}
 			}
 
+      @twitter-instagram-height: 565px;
+
 			&#twitter-feed {
-				top: 600px;
-				left: 115px;
+        margin-left: 115px;
 				width: 400px;
+        height: @twitter-instagram-height;
 			}// end #twitter-feed
 
 			&#instagram-feed {
 				// positioning
-				top: 600px;
-				left: 525px;
 				//size
 				width: 300px;
-				height: 565px;
+				height: @twitter-instagram-height;
 
 				#instagram-photos {
 					position: relative;
@@ -211,9 +220,9 @@
 
 
 			&#youtube {
-				top: 1180px;
-				left: 115px;
-				width: 708px;
+        width: @page-section-width;
+        margin-top: 10px;
+        margin-left: 115px;
 				padding-bottom: 10px;
 				iframe {
 						-webkit-box-shadow: 3px 3px 3px 0px rgba(50, 50, 50, 0.75);
@@ -227,7 +236,8 @@
 	} // end media
 	#footer {
 		position: relative;
-		width: 100%;
+    margin: 0 auto;
+    width: @page-section-width;
 		padding-bottom: 6px;
 		text-align: center;
 		font-size: 0.9em;
