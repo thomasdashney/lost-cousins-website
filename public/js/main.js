@@ -70,10 +70,6 @@ $(document).ready(function() {
         $('#free-download-link').addClass('disabled');
     }
   });
-  function isValidEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
-  }
 
   $('#free-download-link').click(function() {
     var email = $emailField.val();
@@ -145,9 +141,34 @@ $(document).ready(function() {
     });
   });
 
+  var $emailField = $('#mailing-list-form input')
+  var $mailingListButton = $('#mailing-list-submit-button')
+
+  $emailField.on('propertychange change click keyup input paste', function() {
+    if ($emailField.data('oldVal') != $emailField.val()) {
+      $emailField.data('oldVal', $emailField.val());
+      var input = $emailField.val();
+      if (isValidEmail(input))
+        $mailingListButton.removeClass('disabled');
+      else
+        $mailingListButton.addClass('disabled');
+    }
+  });
+
+  // mailing list button
+  $('#mailing-list-form').submit(function (e, vals) {
+    e.preventDefault()
+    var email = $emailField.val()
+    if (!isValidEmail(email)) return
+
+    $.post('./php/submit_email.php', { email: email }, function (done) {
+      $emailField.val('')
+    })
+  })
+
 });
 
-var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
               'Sep', 'Oct', 'Nov', 'Dec'];
 
 // get show data through combination of songkick and custom data
@@ -230,8 +251,8 @@ function loadShowData(cb) {
       yesterday.setDate(today.getDate()-1);
       for (var id in shows) {
         var show = shows[id];
-        if (!show.date || 
-            (show.date.obj < yesterday) || 
+        if (!show.date ||
+            (show.date.obj < yesterday) ||
             (show.announced && show.announced === 'false'))
           delete shows[id]; // delete the show
       }
@@ -309,7 +330,7 @@ function generateInstagramImgElement(photos) {
     var photo = photos[i];
     // format date
     var datef = dateFormatWithYear(new Date(parseInt(photo.time)*1000));
-    html += '<a href="' + photo.link + '" target="_blank">' + 
+    html += '<a href="' + photo.link + '" target="_blank">' +
               '<div class="inst-img">' + // for effect
                 '<img src="' + photo.img.url + '">' +
                 '<div class="photo-caption" style="display: none;">' +
@@ -317,7 +338,7 @@ function generateInstagramImgElement(photos) {
                   '<hr>' +
                   '<p class="caption">' + photo.caption + '</p>' +
                 '</div>' +
-              '</div>' + 
+              '</div>' +
             '</a>';
   }
   return html;
@@ -336,7 +357,7 @@ function insertInstagramPhotos(photos) {
       div.addClass('darken');
       // show caption
       div.children('.photo-caption').fadeIn(100);
-    }, 
+    },
     function mouseLeave() {
       var div = $(this);
 
@@ -363,4 +384,9 @@ function blink($thingToBlink, numberOfTimesToBlink) {
       }, 1000);
     }, 150);
   }
+}
+
+function isValidEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
 }

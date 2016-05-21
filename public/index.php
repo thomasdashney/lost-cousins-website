@@ -141,9 +141,9 @@
               </div><!-- end forest -->
 
               <form id="mailing-list-form">
-              <button id="mailing-list-submit-button" type="submit" class="btn btn-primary">Join Mailing List</button>
+                <button id="mailing-list-submit-button" type="submit" class="btn btn-primary">Join Mailing List</button>
                 <div id="mailing-list-input-container">
-                  <input type="text" placeholder="ex. your.name@gmail.com" />
+                  <input type="text" placeholder="ex. your.name@gmail.com" name="email" />
                 </div>
               </form>
 
