@@ -313,16 +313,34 @@ function parseInstagramResponse(res) {
       // there might not be a caption, so only set it if it's there
       if (photo.caption && photo.caption.text)
         caption = photo.caption.text;
+      console.log('photo', photo)
       return {
         img: photo.images.low_resolution,
         caption: caption,
         time: photo.created_time,
-        link: photo.link
+        link: photo.link,
+        isVideo: photo.type === 'video'
       };
     }),
     nextUrl: res.pagination.next_url || false
   };
 }
+
+var instagramTemplate =
+  '<a href="{{link}}" target="_blank">' +
+    '<div class="inst-img">' + // for effect
+      '<img src="{{url}}" class="{{#if isVideo}}fade{{/if}}">' +
+      '{{#if isVideo}}' +
+        '<span class="glyphicon glyphicon-play instagram-video-play"></span>' +
+      '{{/if}}' +
+      '<div class="photo-caption" style="display: none;">' +
+        '<p class="date">{{date}}</p>' +
+        '<hr>' +
+        '<p class="caption">{{caption}}</p>' +
+      '</div>' +
+    '</div>' +
+  '</a>';
+var generateInstagramHtml = Handlebars.compile(instagramTemplate);
 
 function generateInstagramImgElement(photos) {
   var html = '';
@@ -330,16 +348,13 @@ function generateInstagramImgElement(photos) {
     var photo = photos[i];
     // format date
     var datef = dateFormatWithYear(new Date(parseInt(photo.time)*1000));
-    html += '<a href="' + photo.link + '" target="_blank">' +
-              '<div class="inst-img">' + // for effect
-                '<img src="' + photo.img.url + '">' +
-                '<div class="photo-caption" style="display: none;">' +
-                  '<p class="date">' + datef + '</p>' +
-                  '<hr>' +
-                  '<p class="caption">' + photo.caption + '</p>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
+    html += generateInstagramHtml({
+      link: photo.link,
+      url: photo.img.url,
+      date: datef,
+      caption: photo.caption,
+      isVideo: photo.isVideo
+    })
   }
   return html;
 }
@@ -350,17 +365,21 @@ function insertInstagramPhotos(photos) {
   // insert images
   $('#instagram-photos').append(html);
   // apply hover listener effect to inserted images
+  var fadeInAmount = 100
   $('#instagram-photos .inst-img').hover(
     function mouseEnter() {
       var div = $(this);
+      // hide play button
+      div.find('.instagram-video-play').hide()
       // darken background and add image transparency
       div.addClass('darken');
       // show caption
-      div.children('.photo-caption').fadeIn(100);
+      div.children('.photo-caption').fadeIn(fadeInAmount);
     },
     function mouseLeave() {
       var div = $(this);
-
+      // show play button
+      div.find('.instagram-video-play').show()
       // remove darkness
       div.removeClass('darken');
       // hide caption
