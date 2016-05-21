@@ -70,10 +70,6 @@
                 <a href="http://soundcloud.com/lostcousinsband" target="_blank">
                     <img id="soundcloud-logo" src="./img/player/soundcloud-logo.png" data-toggle="tooltip" data-placement="right" title="Listen on Soundcloud">
                 </a>
-                <!-- download button -->
-                <a data-toggle="modal" href="#download-modal" data-target="#download-modal" id="download-button" data-toggle="tooltip" data-placement="left" title="Download our music!">
-                    <span class="glyphicon glyphicon-cloud-download"></span>
-                </a>
 
                 <div id="track-listing">
                   <ul>
@@ -105,6 +101,12 @@
                         </button>
 
                         <progress class="song-seeker" ng-value="currentTime / duration" ng-click="seek($event)">{{ currentTime / duration || 0 }}</progress>
+
+                        <!-- download button -->
+                        <a data-toggle="modal" href="#download-modal" data-target="#download-modal" id="download-button" title="Download our music!">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                            Download our EP
+                        </a>
                     </div>
                 </div>
             </div>

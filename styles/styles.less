@@ -103,22 +103,6 @@ button:focus {
 		left: 384px;
 	}
 
-	// download + support
-	a#download-button {
-		color: black;
-		position: absolute;
-		top: 150px;
-		left: 360px;
-		.glyphicon {
-			font-size: 1.8em;
-			opacity: 1;
-			transition: opacity 0.1s linear;
-		}
-		&.blinking .glyphicon {
-			opacity: 0.6;
-		}
-	}
-
 	#track-listing {
 		font-size: 0.9em;
 		position: relative;
@@ -150,7 +134,7 @@ button:focus {
 
 		button.play-pause-button {
 			position: absolute;
-			margin-top: 30px;
+			margin-top: 15px;
 			margin-left: 64px;
 		    background: none;
 		    border: none;
@@ -159,7 +143,7 @@ button:focus {
 
 		button.next-track-button {
 			position: absolute;
-			margin-top: 44px;
+			margin-top: 29px;
 			margin-left: 120px;
 		    background: none;
 		    border: none;
@@ -173,7 +157,7 @@ button:focus {
 
 		progress {
 			position: absolute;
-			margin-top: 100px;
+			margin-top: 84px;
 			margin-left: 34px;
 			width: 150px;
 			height: 14px;
@@ -202,6 +186,32 @@ button:focus {
 				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
 			  -webkit-linear-gradient(left, #5cbeff, #8acefc);
 		}
+
+  	// download + support
+  	a#download-button {
+      color: black;
+  		opacity: 0.6;
+  		position: absolute;
+      top: 108px;
+      left: 30px;
+      width: 200px;
+
+      transition: all 0.5s ease;
+  		.glyphicon {
+  			font-size: 1.8em;
+  			opacity: 1;
+  			transition: opacity 0.1s linear;
+  		}
+  		&.blinking .glyphicon {
+  			opacity: 0.6;
+  		}
+
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+  	}
+
 	}
 }
 
