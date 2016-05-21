@@ -123,7 +123,7 @@
             <div id="media">
               <div id="forest">
                 <div id="media-top"></div>
-                <img id="forest" src="./img/social/forest.png" />
+                <img id="forest-img" src="./img/social/forest.png" />
                 <img id="find-the-cousins" class="element" src="./img/social/find-the-cousins.png" />
 
                 <!-- social media buttons -->
