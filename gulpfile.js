@@ -2,7 +2,7 @@ var gulp = require('gulp')
 var gutil = require('gutil')
 var plugins = require('gulp-load-plugins')()
 
-gulp.task('default', ['watch'])
+gulp.task('default', ['compile-css', 'watch'])
 
 gulp.task('watch', function () {
   gulp.watch('styles/*.less', ['compile-css'])
