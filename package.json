@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/thomasdashney/lost-cousins-website/issues"
   },
-  "homepage": "https://github.com/thomasdashney/lost-cousins-website#readme"
+  "homepage": "https://github.com/thomasdashney/lost-cousins-website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-plumber": "^1.1.0",
+    "gutil": "^1.6.4"
+  }
 }

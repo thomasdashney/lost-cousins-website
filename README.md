@@ -27,10 +27,10 @@ Set Up (Development)
 ---------------------
 
 * Fork this repo and clone locally: `git checkout https://github.com/thomasdashney/lost-cousins-website.git`
-* The project uses LESS and compiles to CSS. I made use of a simple less-watch-compiler, which can be found [here](https://github.com/jonycheung/Dead-Simple-LESS-Watch-Compiler).
-    * Install Node.js v0.12
-		* Install less on your machine: `npm install -g less`
-		* `npm start` to watch for file changes
+* The project uses
+    * Install Node.js >= v0.12
+		* Install gulp on your machine: `npm install -g gulp`
+    * Run `gulp watch` for development (compiles css from `/styles` to `/public/css`)
 * To set up a simple LAMP server, you can use the provided vagrant file (courtesy of [scotch-box](https://github.com/scotch-io/scotch-box)).
     * Install [Vagrant](https://www.vagrantup.com/downloads.html)
     * Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
