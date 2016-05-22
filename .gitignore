@@ -3,3 +3,5 @@ public/shows.json
 public/php/db-config.php
 .vagrant
 node_modules
+build
+config.json
