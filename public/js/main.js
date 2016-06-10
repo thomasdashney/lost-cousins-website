@@ -287,7 +287,7 @@ function getInitialInstagramData(cb) {
     url: 'https://api.instagram.com/v1/users/1409521348/media/recent/',
     dataType: 'jsonp',
     data: {
-      client_id: '713afb58f89349d4894fa6af23dd1887',
+      access_token: '1409521348.1677ed0.cba7520b1207476aa84283c78cbb05ec',
       count: 5
     }
   }).done(function(res) {
