@@ -263,7 +263,6 @@
         <script src="js/vendor/customize-twitter-1.1.min.js" type="text/javascript"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/lodash.compat.min.js"></script>
-        <script src="js/vendor/moment.min.js"></script>
         <!-- analytics setup -->
         <script src="js/analytics.js"></script>
 
