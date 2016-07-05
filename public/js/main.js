@@ -264,13 +264,8 @@ function loadShowData(cb) {
 }
 
 function dateFormat(date) {
-  date = moment(date)
-  var nextSunday = moment().add(1, 'week').day(0)
-  if (date.isBefore(nextSunday)) {
-    return date.format('dddd')
-  } else {
-    return date.format('MMM D')
-  }
+  return months[date.getMonth()] + ' ' +
+         date.getDate();
 }
 
 function dateFormatWithYear(date) {
