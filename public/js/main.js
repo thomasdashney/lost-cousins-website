@@ -72,7 +72,7 @@ $(document).ready(function() {
   });
 
   $('#free-download-link').click(function() {
-    var email = $emailField.val();
+    var email = $('.email-field').val();
     $.post('php/submit_email.php', {email: email})
       .then(function(data) {
         console.log('Email post successful');
