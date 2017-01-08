@@ -58,13 +58,13 @@ $(document).ready(function() {
   });
 
   // when a valid email is entered, enable download link
-  $emailField = $('#free-download-modal .email-field');
+  $emailField = $('.email-field');
   $emailField.data('oldVal', $emailField.val());
   $emailField.on('propertychange change click keyup input paste', function() {
-    if ($emailField.data('oldVal') != $emailField.val()) {
-      $emailField.data('oldVal', $emailField.val());
-      var input = $emailField.val();
-      if (isValidEmail(input))
+    var value = $('.email-field').val()
+    if ($emailField.data('oldVal') != value) {
+      $emailField.data('oldVal', value);
+      if (isValidEmail(value))
         $('#free-download-link').removeClass('disabled');
       else
         $('#free-download-link').addClass('disabled');
@@ -186,7 +186,7 @@ function loadShowData(cb) {
 
   });
   songkickRequest.done(function populateTourDates(res) {
-    var skShows = res.resultsPage.results.event; // should be fine in sk api 3.0
+    var skShows = res.resultsPage.results.event || []; // should be fine in sk api 3.0
     var shows = {};
     for (var i = 0; i < skShows.length; i ++) { // for each soundcloud event
       // get the songkick show object
