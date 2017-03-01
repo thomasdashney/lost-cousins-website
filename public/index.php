@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>LOST COUSINS | OFFICIAL SITE</title>
-        <meta name="description" content="Formed in 2014 and based in Kingston, ON, Canada, Lost Cousins is a unique group that is continually trying to push the boundaries of the broad genre of 'Indie Rock.'">
+        <meta name="description" content="Toronto-based psychedelic rock with celestial textures, lush harmonies, and creative rhythms.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
