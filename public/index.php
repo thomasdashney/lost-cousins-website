@@ -12,7 +12,6 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/splash.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/layout-mobile.css">
@@ -34,9 +33,6 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- SPLASH -->
-        <?php include 'views/splash.php'; ?>
 
         <!-- BEGIN CONTENT -->
         <!-- background image -->
